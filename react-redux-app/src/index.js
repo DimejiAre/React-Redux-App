@@ -11,6 +11,7 @@ import * as serviceWorker from './serviceWorker';
 
 const monsterReducer = combineReducers({
     beers: reducers.beerReducer,
+    count: reducers.countReducer
 })
 
 const store = createStore(

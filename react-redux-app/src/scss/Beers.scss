@@ -11,11 +11,27 @@ a {
     color: initial;
 }
 
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 30px;
+
+    button {
+        background-color: gray;
+        border-radius: 5px;
+        width: 80px;
+        height: 30px;
+        cursor: pointer;
+    }
+}
+
 .beers{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     // text-align: left;
+
     .beer{
         display: flex;
         flex-direction: column;
