@@ -1,0 +1,30 @@
+body {
+    background-color: whitesmoke;
+}
+
+.beers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    // text-align: left;
+    .beer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        background-color: #E9AF04;
+        h2 {
+            text-align: center;
+        }
+        width: 35vw;
+        max-height: 100vh;
+        overflow: hidden;
+        border: 1px solid black;
+        border-radius: 50px;
+        margin: 20px;
+        padding: 20px;
+        img {
+            height: 20vh;
+        }
+    }
+}
