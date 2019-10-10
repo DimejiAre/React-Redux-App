@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { combineReducers, createStore} from 'redux';
+import { combineReducers, createStore, compose, applyMiddleware} from 'redux';
 import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 
 import * as reducers from './state/reducers';
 import './index.css';
@@ -14,7 +15,11 @@ const monsterReducer = combineReducers({
 
 const store = createStore(
     monsterReducer,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    {},
+    compose(
+        applyMiddleware(thunk),
+        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    )
     )
 
 
