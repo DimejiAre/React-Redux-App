@@ -1,15 +1,20 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 import * as actionCreators from '../state/actionCreators';
 import Beer from './Beer'
 
 export function Beers(props){
-    const {beers} = props;
+    debugger
+    const {beers, getBeers} = props;
+    useEffect(()=> {
+        getBeers();
+    },[])
+
     return (
         <div>
             {
                 beers.map(beer => (
-                    <Beer beer={beer} />
+                    <Beer key={beer.id} beer={beer} />
                 ))
             }
         </div>
